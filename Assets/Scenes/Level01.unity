@@ -1481,7 +1481,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!114 &1657748024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1495,8 +1495,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1657748023}
-  forwardForce: 4000
-  sidewaysForce: 75
+  forwardForce: 8000
+  sidewaysForce: 100
 --- !u!114 &1657748025
 MonoBehaviour:
   m_ObjectHideFlags: 0
