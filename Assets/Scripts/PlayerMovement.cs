@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
 
+    public float forwardForce = 2000f;
+
     void FixedUpdate()
     {
         rb.AddForce(0, 0, 2000 * Time.deltaTime);
