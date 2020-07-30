@@ -4,8 +4,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public Rigidbody rb;
 
-    public float forwardForce = 1000f;
-    public float sidewaysForce = 600f;
+    public float forwardForce = 4000f;
+    public float sidewaysForce = 75f;
 
     private bool isMovingLeft = false;
     private bool isMovingRight = false;
@@ -40,13 +40,13 @@ public class PlayerMovement : MonoBehaviour
         // Go right
         if (isMovingRight)
         {
-            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
 
         // Go left
         if (isMovingLeft)
         {
-            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
+            rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0, ForceMode.VelocityChange);
         }
     }
 }
