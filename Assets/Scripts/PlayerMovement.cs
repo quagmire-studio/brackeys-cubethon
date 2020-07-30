@@ -9,18 +9,44 @@ public class PlayerMovement : MonoBehaviour
     public float forwardForce = 1000f;
     public float sidewaysForce = 600f;
 
+    private bool isMovingLeft = false;
+    private bool isMovingRight = false;
+
+    void Update()
+    {
+        // Go right
+        if (Input.GetKey("d"))
+        {
+            isMovingRight = true;
+        }
+        else
+        {
+            isMovingRight = false;
+        }
+
+        // Go left
+        if (Input.GetKey("a"))
+        {
+            isMovingLeft = true;
+        }
+        else
+        {
+            isMovingLeft = false;
+        }
+    }
+
     void FixedUpdate()
     {
         rb.AddForce(0, 0, forwardForce * Time.deltaTime);
 
         // Go right
-        if (Input.GetKey("d"))
+        if (isMovingRight)
         {
             rb.AddForce(sidewaysForce * Time.deltaTime, 0, 0);
         }
 
         // Go left
-        if (Input.GetKey("a"))
+        if (isMovingLeft)
         {
             rb.AddForce(-sidewaysForce * Time.deltaTime, 0, 0);
         }
