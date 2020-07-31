@@ -3,13 +3,14 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
+    public GameObject completeLevelUI;
     public float restartDelay = 1f;
 
     private bool hasGameEnded;
 
     public void CompleteLevel()
     {
-        Debug.Log("Yass!");
+        completeLevelUI.SetActive(true);
     }
 
     public void EndGame()
