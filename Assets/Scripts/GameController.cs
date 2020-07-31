@@ -7,6 +7,11 @@ public class GameController : MonoBehaviour
 
     private bool hasGameEnded;
 
+    public void CompleteLevel()
+    {
+        Debug.Log("Yass!");
+    }
+
     public void EndGame()
     {
         if (!hasGameEnded)

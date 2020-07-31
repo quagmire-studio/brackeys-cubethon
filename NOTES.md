@@ -1,3 +1,4 @@
+
 ## Basics
 
 1.	In any script, `Start` function is called only once at the start of the game while the `Update` function will be called once for each frame.
@@ -44,6 +45,12 @@ if (collision.collider.tag == "Obstacle")
 	// Do something here
 }
 ```
+
+## Trigger vs Collision
+
+**`OnCollisionEnter()`** is used to detect Collisions between objects. To use this method, a `Collider` must be attached to the `GameObject` and it's `IsTrigger` property should unchecked. Note: In order to receive a physical collision event, one of the colliding `GameObjects` must have `RigidBody` attached to itself.  
+
+**`OnTriggerEnter()`** is used to detect collision but it does not act as solid body , rather allows the `GameObjects` to pass through them. To use this method, the `IsTrigger` property of the collider should be checked. Note: To get trigger event to work properly a `RigidBody` must be attached to one of the colliding `GameObjects`.
 
 ## Finding Stuff
 
