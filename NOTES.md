@@ -66,3 +66,26 @@ GetComponent<PlayerMovement>().SomeFunction();	// For current object
 // The FindObjectOfType Way
 FindObjectOfType<PlayerMovement>().SomeFunction();
 ```
+
+## Scene Management
+
+To go from one scene to another, you can use the `LoadScene` function:
+
+```C#
+using UnityEngine;
+using UnityEngine.SceneManagement;	// IMPORTANT
+
+public class LevelComplete : MonoBehaviour
+{
+    public void LoadLevel01()
+    {
+        SceneManager.LoadScene("Level01");
+    }
+}
+```
+
+You can also load the next level (specified in build settings) without actually using the level's name:
+
+```C#
+SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+```
