@@ -7,4 +7,4 @@ Consider donating to him on [Patreon](https://www.patreon.com/brackeys).
 
 ## Preview
 
-![Screenshot](Screenshot.png)
+![Preview](Preview.gif)
